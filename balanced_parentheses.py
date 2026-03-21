@@ -4,6 +4,7 @@ mapping = {
     "{": "}",
 }
 
+
 def is_balanced(s: str) -> bool:
     stack = []
 
@@ -17,11 +18,13 @@ def is_balanced(s: str) -> bool:
             op = stack.pop()
             if mapping[op] != ch:
                 return False
-    
+
     return not stack
+
 
 def main() -> None:
     s = "[[[["
     print(is_balanced(s))
+
 
 main()
